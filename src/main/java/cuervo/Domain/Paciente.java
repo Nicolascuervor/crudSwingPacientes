@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-    @Table(name = "Pacientes")
+@Table(name = "Pacientes")
 
 public class Paciente {
     @Id
@@ -20,10 +20,10 @@ public class Paciente {
     private String apellido;
 
     @Column(nullable = false)
-    private int edad;
+    private String edad;
 
     @Column(nullable = false)
-    private int telefono;
+    private String telefono;
 
     @Column(nullable = false)
     private String genero;
@@ -31,7 +31,7 @@ public class Paciente {
     @OneToMany(mappedBy = "paciente")
     private List<Cita> citas;
 
-    public Paciente(long id, String nombre, String apellido, int edad,int telefono, String genero) {
+    public Paciente(long id, String nombre, String apellido, String edad, String telefono, String genero) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -41,7 +41,7 @@ public class Paciente {
     }
 
 
-    public Paciente(String nombre, String apellido, int edad, int telefono, String genero) {
+    public Paciente(String nombre, String apellido, String edad, String telefono, String genero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -76,20 +76,20 @@ public class Paciente {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

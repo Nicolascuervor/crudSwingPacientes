@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 
 public class PacienteListener {
     @PrePersist
-    public void PrePerSist(Paciente paciente){
+    public void PrePerSist(Paciente paciente) {
         System.out.println("Paciente a persistir: " + paciente);
     }
 
     @PostPersist
-    public void PostPerSist(Paciente paciente){
+    public void PostPerSist(Paciente paciente) {
         System.out.println("Paciente persistido: " + paciente);
     }
 

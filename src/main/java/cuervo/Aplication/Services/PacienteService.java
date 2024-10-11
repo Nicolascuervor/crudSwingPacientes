@@ -27,7 +27,7 @@ public class PacienteService {
     }
 
     public Paciente buscarPacientePorId(int id) {
-       return repository.findById(id);
+        return repository.findById(id);
     }
 
     public void actualizarPaciente(Paciente paciente) {

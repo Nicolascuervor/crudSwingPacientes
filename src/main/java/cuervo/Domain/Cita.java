@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-    @Table(name = "Citas")
+@Table(name = "Citas")
 
 public class Cita {
 
@@ -32,8 +32,7 @@ public class Cita {
     private Paciente paciente;
 
 
-
-    public Cita(String titulo, String fecha, String hora, String motivo, Paciente paciente ) {
+    public Cita(String titulo, String fecha, String hora, String motivo, Paciente paciente) {
         this.titulo = titulo;
         this.fecha = fecha;
         this.hora = hora;
@@ -41,7 +40,8 @@ public class Cita {
         this.paciente = paciente;
     }
 
-    public Cita() {}
+    public Cita() {
+    }
 
 
     public int getId() {
@@ -109,7 +109,7 @@ public class Cita {
 
     @Override
     public String toString() {
-       paciente = getPaciente();
+        paciente = getPaciente();
         return "Informacion de cita: " +
                 "ID de la cita = |" + id + "|\t" +
                 "Titulo = |" + titulo + "|\t" +
